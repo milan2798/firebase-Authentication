@@ -13,6 +13,8 @@ Email && Password Authentication
 
 3. clone this in your machine and change the firebase config details.
 
+Live Demo : https://firebaseauth.vercel.app/
+
 # Points to remember
 
 - Firebase has its own inbuilt method to store user credential and Retrival 
