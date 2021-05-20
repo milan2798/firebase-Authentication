@@ -13,6 +13,32 @@ import { useEffect, useState } from 'react'
 
 
 function App() {
+  const [dis, dispatch] = useState({});
+
+
+  useEffect(() => {
+    //will only run once the app component loads...
+    auth.onAuthStateChanged((authUser) => {
+      // console.log("The user is >>>>", authUser);
+
+      if (authUser) {
+        //the user just logged in the user was logged in
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        //the user is logged out
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+    // return () => {
+    //   cleanup
+    // }
+  }, []);
   return (
 
 

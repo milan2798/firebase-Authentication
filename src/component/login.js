@@ -34,12 +34,13 @@ function Login() {
                 //console.log(error);
             });
     }
-
+    
     //console.log("Cuurent user", auth.currentUser ? auth.currentUser : null);
     return (
-
+       
         <div>
-
+            {/* {console.log("auth login",auth)} */}
+            { auth ? auth.currentUser ? <Redirect to="/home" /> : <span></span> : <span></span>}
             <div className="grid">
                 <h1 className="header">Sign In </h1>
                 <form onSubmit={fireLog} method="post" className="form login">
@@ -82,7 +83,7 @@ function Login() {
             </svg>
             {error.er ? <h4 style={{ width: "300px" }}>{error.text}</h4> : <span></span>}
             {/* {console.log("login  auth ", auth ? auth.currentUser : null)} */}
-            { auth ? auth.currentUser ? <Redirect to="/home" /> : <span></span> : <span></span>}
+           
 
 
 

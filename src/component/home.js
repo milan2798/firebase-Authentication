@@ -9,7 +9,6 @@ import { useState, useEffect } from 'react';
 import { auth, db } from './firesetup'
 
 function Home() {
-
     const [error, seterror] = useState({ er: false, text: "" });
     const logout = () => {
         auth.signOut().then(() => {
